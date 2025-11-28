@@ -102,21 +102,21 @@ UNIT_DIST = "um"   # neuron position in cortex space
 #### 1.3.1 막전위 방정식
 
 - 단위 체크:
-  - \( C_m \): `nF`
-  - \( V_m \): `mV`
-  - \( I_* \): `nA`
-  - 시간 \( t \): `ms`
+  - $$\ C_m \$$: `nF`
+  - $$\ V_m \$$: `mV`
+  - $$\ I_* \$$: `nA`
+  - 시간 $$\ t \&&: `ms`
 
 **연속형 표현:**
 
-\[
+&&\[
 C_m \frac{dV_m}{dt} =
 - \bar{g}_{Na} m^3 h (V_m - E_{Na})
 - \bar{g}_{K} n^4 (V_m - E_{K})
 - \bar{g}_{L} (V_m - E_{L})
 + I_{\text{syn}}
 + I_{\text{ext}}
-\]
+\]&&
 
 - 좌변: `nF * mV/ms = nA` (전류 단위와 일치)
 - 우변 각 항: `µS * mV = nA` (단위 맞음)
