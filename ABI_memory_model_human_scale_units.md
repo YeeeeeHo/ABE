@@ -9,6 +9,11 @@
 > **“표현 방식만 바꿔서”** 메모리를 줄인다는 전제에 기반한다.
 
 ---
+$$
+\begin{aligned}
+f(x)&=ax^2+bx+c\\
+g(x)&=Ax^4
+\end{aligned}$$
 $a_1, a^2, a_1^2$
 ## 0. 전역 단위 & 표기 규칙 (Units & Notation)
 
