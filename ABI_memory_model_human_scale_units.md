@@ -140,11 +140,11 @@ S_{\text{neuron}} \approx 100 \text{ B / neuron}
 
 ### 1.5 전체 뉴런 메모리 (압축 전)
 
-\[
+$$\
 M_{\text{neuron}} = N_{\text{neuron}} \times S_{\text{neuron}}
 = 8.6 \times 10^{10} \times 100 \text{ B}
 = 8.6 \times 10^{12} \text{ B} \approx 8.6 \text{ TB}
-\]
+\$$
 
 ---
 
@@ -154,24 +154,24 @@ M_{\text{neuron}} = N_{\text{neuron}} \times S_{\text{neuron}}
 
 - 인간 뇌 기준 **총 시냅스 수** (범위):
   - 낮은 추정:  
-    \[
+    $$\
     N_{\text{syn}}^{\text{low}} = 1 \times 10^{14}
-    \]
+    \$$
   - 높은 추정:  
-    \[
+    $$\
     N_{\text{syn}}^{\text{high}} = 1 \times 10^{15}
-    \]
+    \$$
 
 ### 2.2 시냅스당 상태 변수 & 단위
 
 | 심볼 | 설명 | 단위(내부) | 타입(예시) |
 |------|------|-----------|------------|
-| \( w \) | 가중치 (전도도 스케일) | 무차원 (`1`) | float16/int8/int4/binary |
-| \( g(t) \) | 순간 전도도 | `µS` | float32/float16 |
-| \( E_{\text{syn}} \) | 시냅스 역전위 | `mV` | float32 |
-| \( I_{\text{syn}} \) | 개별 시냅스 전류 | `nA` | float32 |
-| \( x_{\text{pre}}, x_{\text{post}} \) | STDP trace | 무차원 (`1`) | float16/int8 |
-| \( d \) | 지연 (delay) | `ms` | float16/int8 |
+| $$\ w \$$ | 가중치 (전도도 스케일) | 무차원 (`1`) | float16/int8/int4/binary |
+| $$\ g(t) \$$ | 순간 전도도 | `µS` | float32/float16 |
+| $$\ E_{\text{syn}} \$$ | 시냅스 역전위 | `mV` | float32 |
+| $$\ I_{\text{syn}} \$$ | 개별 시냅스 전류 | `nA` | float32 |
+| $$\ x_{\text{pre}}, x_{\text{post}} \$$ | STDP trace | 무차원 (`1`) | float16/int8 |
+| $$\ d \$$ | 지연 (delay) | `ms` | float16/int8 |
 | `type_id` | 시냅스 타입 (AMPA, NMDA, GABA...) | 무차원(정수) | uint8/uint16 |
 | `pre_id` | pre-synaptic 뉴런 인덱스 | 무차원(정수) | int32/int64 |
 | `post_id` | post-synaptic 뉴런 인덱스 | 무차원(정수) | int32/int64 |
