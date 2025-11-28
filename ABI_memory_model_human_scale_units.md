@@ -187,24 +187,24 @@ I_{\text{syn}} = g(t) (V_m - E_{\text{syn}})
 
 $$\ g(t) = w \cdot s(t) \$$
 
-- \( w \): 무차원 스케일 (low-bit로 표현 가능)  
-- \( s(t) \): spike 이후 exponential decay (무차원 또는 `µS` 기준 스케일링)
+- $$\ w \$$: 무차원 스케일 (low-bit로 표현 가능)  
+- $$\ s(t) \$$: spike 이후 exponential decay (무차원 또는 `µS` 기준 스케일링)
 
 ### 2.4 STDP 가소성 (단위 포함)
 
 - 스파이크 시간:
-  - \( t_{\text{pre}}, t_{\text{post}} \): `ms`
-  - \( \Delta t = t_{\text{post}} - t_{\text{pre}} \): `ms`
+  - $$\ t_{\text{pre}}, t_{\text{post}} \$$: `ms`
+  - $$\ \Delta t = t_{\text{post}} - t_{\text{pre}} \$$: `ms`
 
 전형적인 STDP 규칙:
 
-\[
+$$\
 \Delta w=
 \begin{cases}
 A_+ \exp(-\Delta t / \tau_+) & \Delta t > 0\\
 -A_- \exp(\Delta t / \tau_-) & \Delta t < 0
 \end{cases}
-\]
+\$$
 
 - \( A_+, A_- \): 무차원 (learning rate)  
 - \( \tau_+, \tau_- \): `ms`
