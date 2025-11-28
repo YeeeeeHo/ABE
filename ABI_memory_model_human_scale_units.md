@@ -77,9 +77,9 @@ UNIT_DIST = "um"   # neuron position in cortex space
 
 - 인간 뇌 기준 **총 뉴런 수**:
 
-  \[
+  $$\[
   N_{\text{neuron}} = 8.6 \times 10^{10} \quad \text{(개)}
-  \]
+  \$$]
 
 ### 1.2 뉴런당 상태 변수 & 단위
 
