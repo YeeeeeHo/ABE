@@ -233,7 +233,7 @@ A_+ \exp(-\Delta t / \tau_+) & \Delta t > 0\\
 
 계산식:
 
-$$\
+$$\ 
 M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}}
 \$$
 
@@ -259,7 +259,7 @@ M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}}
 
 ### 3.2 뉴런 + 시냅스 합 (압축 전)
 
-뉴런 메모리 $$\M_{\text{neuron}} \approx 8.6 \text{ TB}\$$를 더해서,
+뉴런 메모리 $$\ M_{\text{neuron}} \approx 8.6 \text{ TB}\$$를 더해서,
 
 예: float16, 높은 추정 (10¹⁵ 시냅스):
 
