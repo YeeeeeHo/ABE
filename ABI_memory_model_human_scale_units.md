@@ -235,7 +235,7 @@ A_+ \exp(-\Delta t / \tau_+) & \Delta t > 0\\
 
 $$\ M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}} \$$
 
-#### 3.1.1 낮은 추정: $$\N_{\text{syn}}^{\text{low}} = 10^{14}\$$
+#### 3.1.1 낮은 추정: $$\ N_{\text{syn}}^{\text{low}} = 10^{14}\$$
 
 | 타입 | 시냅스당 B | 총 B | TB 단위 | PB 단위 |
 |------|------------|------|---------|---------|
@@ -274,7 +274,7 @@ $$\ M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}} \$$
 여기서는 **뉴런/시냅스 개수를 줄이지 않고**,  
 **표현 방식만 뇌와 비슷하게 바꿔서** 메모리를 줄이는 압축 기법들을 정의한다.
 
-### 4.1 구조적/발달적 압축 배수 $$\C_{\text{struct}}\$$
+### 4.1 구조적/발달적 압축 배수 $$\ C_{\text{struct}}\$$
 
 보수적인(현실적인) 압축 배수 가정:
 
@@ -316,7 +316,7 @@ C_{\text{type}}(\text{type}) = \frac{24}{S_{\text{syn}}(\text{type})}
 
 $$\ C_{\text{total}}(\text{type}) = C_{\text{struct}} \times C_{\text{type}}(\text{type})\$$
 
-| 타입 | $$\C_{\text{total}}\$$ |
+| 타입 | $$\ C_{\text{total}}\$$ |
 |------|----------------------|
 | float32 | $$\ 1.0 \times 10^{6}\$$ |
 | float16 | $$\ 1.2 \times 10^{6}\$$ |
