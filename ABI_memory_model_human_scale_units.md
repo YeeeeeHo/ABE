@@ -175,19 +175,17 @@ M_{\text{neuron}} = N_{\text{neuron}} \times S_{\text{neuron}}
 
 ### 2.3 시냅스 전류 식 (단위 포함)
 
-\[
+$$\
 I_{\text{syn}} = g(t) (V_m - E_{\text{syn}})
-\]
+\$$
 
-- \( g(t) \): `µS`
-- \( V_m, E_{\text{syn}} \): `mV`
+- $$\ g(t) \$$: `µS`
+- $$\ V_m, E_{\text{syn}} \$$: `mV`
 - 결과: `µS * mV = nA` → 전류 단위와 일치.
 
 전도도는:
 
-\[
-g(t) = w \cdot s(t)
-\]
+$$\ g(t) = w \cdot s(t) \$$
 
 - \( w \): 무차원 스케일 (low-bit로 표현 가능)  
 - \( s(t) \): spike 이후 exponential decay (무차원 또는 `µS` 기준 스케일링)
