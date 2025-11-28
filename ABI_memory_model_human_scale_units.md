@@ -59,15 +59,15 @@ UNIT_DIST = "um"   # neuron position in cortex space
 ### 0.3 전역 심볼 정의
 
 - $$\( N_{\text{neuron}} \)$$: 뉴런의 총 개수  
-- \( N_{\text{syn}} \): 시냅스의 총 개수  
-- \( S_{\text{neuron}} \): 뉴런 1개당 메모리 (bytes)  
-- \( S_{\text{syn}} \): 시냅스 1개당 메모리 (bytes)  
-- \( M_{\text{neuron}} \): 전체 뉴런 메모리 (bytes)  
-- \( M_{\text{syn}} \): 전체 시냅스 메모리 (bytes)  
-- \( M_{\text{raw}} \): 뉴런+시냅스 합, 압축 전 메모리 (bytes)  
-- \( C_{\text{struct}} \): 구조/표현 압축 배수 (단위 없음)  
-- \( C_{\text{total}} \): 구조+low-bit 포함 총 압축 배수 (단위 없음)  
-- \( M_{\text{final}} \): 압축 후 최종 메모리 (bytes)
+- $$\( N_{\text{syn}} \)$$: 시냅스의 총 개수  
+- $$\( S_{\text{neuron}} \)$$: 뉴런 1개당 메모리 (bytes)  
+- $$\( S_{\text{syn}} \)$$: 시냅스 1개당 메모리 (bytes)  
+- $$\( M_{\text{neuron}} \)$$: 전체 뉴런 메모리 (bytes)  
+- $$\( M_{\text{syn}} \)$$: 전체 시냅스 메모리 (bytes)  
+- $$\( M_{\text{raw}} \)$$: 뉴런+시냅스 합, 압축 전 메모리 (bytes)  
+- $$\( C_{\text{struct}} \)$$: 구조/표현 압축 배수 (단위 없음)  
+- $$\( C_{\text{total}} \)$$: 구조+low-bit 포함 총 압축 배수 (단위 없음)  
+- $$\( M_{\text{final}} \)$$: 압축 후 최종 메모리 (bytes)
 
 ---
 
