@@ -1,4 +1,4 @@
-# ABI Memory Model – Human-Scale Brain with Compressed Representation
+# ABE Memory Model – Human-Scale Brain with Compressed Representation
 
 > **목표**  
 > 인간 뇌와 **동일한 스케일·구조·수식**을 가진 인공 뇌를 가정하고,  
