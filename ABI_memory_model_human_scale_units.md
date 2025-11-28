@@ -233,33 +233,31 @@ A_+ \exp(-\Delta t / \tau_+) & \Delta t > 0\\
 
 계산식:
 
-$$\ 
-M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}}
-\$$
+$$\ M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}} \$$
 
-#### 3.1.1 낮은 추정: \(N_{\text{syn}}^{\text{low}} = 10^{14}\)
+#### 3.1.1 낮은 추정: $$\N_{\text{syn}}^{\text{low}} = 10^{14}\$$
 
 | 타입 | 시냅스당 B | 총 B | TB 단위 | PB 단위 |
 |------|------------|------|---------|---------|
-| float32 | 24 | $$\2.4 \times 10^{15}\$$ | 2400 TB | 2.4 PB |
-| float16 | 20 | $$\2.0 \times 10^{15}\$$ | 2000 TB | 2.0 PB |
-| int8    | 16 | $$\1.6 \times 10^{15}\$$ | 1600 TB | 1.6 PB |
-| int4    | 8  | $$\0.8 \times 10^{15}\$$ | 800 TB  | 0.8 PB |
-| binary  | 4  | $$\0.4 \times 10^{15}\$$ | 400 TB  | 0.4 PB |
+| float32 | 24 | $$\ 2.4 \times 10^{15} \$$ | 2400 TB | 2.4 PB |
+| float16 | 20 | $$\ 2.0 \times 10^{15} \$$ | 2000 TB | 2.0 PB |
+| int8    | 16 | $$\ 1.6 \times 10^{15} \$$ | 1600 TB | 1.6 PB |
+| int4    | 8  | $$\ 0.8 \times 10^{15} \$$ | 800 TB  | 0.8 PB |
+| binary  | 4  | $$\ 0.4 \times 10^{15} \$$ | 400 TB  | 0.4 PB |
 
-#### 3.1.2 높은 추정: \(N_{\text{syn}}^{\text{high}} = 10^{15}\)
+#### 3.1.2 높은 추정: $$\ N_{\text{syn}}^{\text{high}} = 10^{15} \$$
 
 | 타입 | 시냅스당 B | 총 B | TB 단위 | PB 단위 |
 |------|------------|------|---------|---------|
-| float32 | 24 | $$\2.4 \times 10^{16}\$$ | 24000 TB | 24 PB |
-| float16 | 20 | $$\2.0 \times 10^{16}\$$ | 20000 TB | 20 PB |
-| int8    | 16 | $$\1.6 \times 10^{16}\$$ | 16000 TB | 16 PB |
-| int4    | 8  | $$\0.8 \times 10^{16}\$$ | 8000 TB  | 8 PB  |
-| binary  | 4  | $$\0.4 \times 10^{16}\$$ | 4000 TB  | 4 PB  |
+| float32 | 24 | $$\ 2.4 \times 10^{16} \$$ | 24000 TB | 24 PB |
+| float16 | 20 | $$\ 2.0 \times 10^{16} \$$ | 20000 TB | 20 PB |
+| int8    | 16 | $$\ 1.6 \times 10^{16} \$$ | 16000 TB | 16 PB |
+| int4    | 8  | $$\ 0.8 \times 10^{16} \$$ | 8000 TB  | 8 PB  |
+| binary  | 4  | $$\ 0.4 \times 10^{16} \$$ | 4000 TB  | 4 PB  |
 
 ### 3.2 뉴런 + 시냅스 합 (압축 전)
 
-뉴런 메모리 $$\ M_{\text{neuron}} \approx 8.6 \text{ TB}\$$를 더해서,
+뉴런 메모리 $$\ M_{\text{neuron}} \approx 8.6 \text{ TB} \$$를 더해서,
 
 예: float16, 높은 추정 (10¹⁵ 시냅스):
 
@@ -267,9 +265,7 @@ M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}}
 - 시냅스: 20 PB = 20000 TB  
 - 합계:
 
-  $$\
-  M_{\text{raw}} \approx 20008.6 \text{ TB} \approx 20 \text{ PB}
-  \$$
+  $$\ M_{\text{raw}} \approx 20008.6 \text{ TB} \approx 20 \text{ PB} \$$
 
 ---
 
