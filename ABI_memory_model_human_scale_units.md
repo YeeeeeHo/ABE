@@ -304,7 +304,7 @@ $$\
 C_{\text{type}}(\text{type}) = \frac{24}{S_{\text{syn}}(\text{type})}
 \$$
 
-| 타입 | 시냅스당 B | $$\C_{\text{type}}\$$ |
+| 타입 | 시냅스당 B | $$\ C_{\text{type}}\$$ |
 |------|-----------|------------------------|
 | float32 | 24 | 1.0 |
 | float16 | 20 | 1.2 |
@@ -314,17 +314,15 @@ C_{\text{type}}(\text{type}) = \frac{24}{S_{\text{syn}}(\text{type})}
 
 최종 압축 배수:
 
-$$\
-C_{\text{total}}(\text{type}) = C_{\text{struct}} \times C_{\text{type}}(\text{type})
-\$$
+$$\ C_{\text{total}}(\text{type}) = C_{\text{struct}} \times C_{\text{type}}(\text{type})\$$
 
 | 타입 | $$\C_{\text{total}}\$$ |
 |------|----------------------|
-| float32 | \(1.0 \times 10^{6}\) |
-| float16 | \(1.2 \times 10^{6}\) |
-| int8    | \(1.5 \times 10^{6}\) |
-| int4    | \(3.0 \times 10^{6}\) |
-| binary  | \(6.0 \times 10^{6}\) |
+| float32 | $$\ 1.0 \times 10^{6}\$$ |
+| float16 | $$\ 1.2 \times 10^{6}\$$ |
+| int8    | $$\ 1.5 \times 10^{6}\$$ |
+| int4    | $$\ 3.0 \times 10^{6}\$$ |
+| binary  | $$\ 6.0 \times 10^{6}\$$ |
 
 ---
 
@@ -332,37 +330,37 @@ C_{\text{total}}(\text{type}) = C_{\text{struct}} \times C_{\text{type}}(\text{t
 
 최종 메모리:
 
-\[
+$$\
 M_{\text{final}}(\text{type}) =
   \frac{M_{\text{raw}}(\text{type})}{C_{\text{total}}(\text{type})}
-\]
+\$$
 
-### 5.1 낮은 추정 (\(N_{\text{syn}}^{\text{low}} = 10^{14}\))
+### 5.1 낮은 추정 $$\ N_{\text{syn}}^{\text{low}} = 10^{14}\$$
 
 #### 5.1.1 raw 합계 (뉴런 + 시냅스)
 
 | 타입 | 시냅스 raw (TB) | 뉴런 (TB) | 합계 raw (TB) | 합계 raw (B) |
 |------|-----------------|-----------|----------------|--------------|
-| float32 | 2400 | 8.6 | 2408.6 | \(2.4086 \times 10^{15}\) |
-| float16 | 2000 | 8.6 | 2008.6 | \(2.0086 \times 10^{15}\) |
-| int8    | 1600 | 8.6 | 1608.6 | \(1.6086 \times 10^{15}\) |
-| int4    | 800  | 8.6 | 808.6  | \(8.086 \times 10^{14}\) |
-| binary  | 400  | 8.6 | 408.6  | \(4.086 \times 10^{14}\) |
+| float32 | 2400 | 8.6 | 2408.6 | $$\ 2.4086 \times 10^{15}\$$ |
+| float16 | 2000 | 8.6 | 2008.6 | $$\ 2.0086 \times 10^{15}\$$ |
+| int8    | 1600 | 8.6 | 1608.6 | $$\ 1.6086 \times 10^{15}\$$ |
+| int4    | 800  | 8.6 | 808.6  | $$\ 8.086 \times 10^{14}\$$ |
+| binary  | 400  | 8.6 | 408.6  | $$\ 4.086 \times 10^{14}\$$ |
 
 #### 5.1.2 압축 후 (GB 단위)
 
 계산 예시 (float16):
 
-\[
+$$\
 M_{\text{final}}(\text{float16}) =
 \frac{2.0086 \times 10^{15}}{1.2 \times 10^{6}}
 = 1.6738 \times 10^{9} \text{ B}
 \approx 1.67 \text{ GB}
-\]
+\$$
 
 전체 표:
 
-| 타입 | \(C_{\text{total}}\) | raw (B) | 최종 메모리 (GB) |
+| 타입 | $$\ C_{\text{total}}\$$ | raw (B) | 최종 메모리 (GB) |
 |------|-------------------------|---------|-------------------|
 | float32 | $$\ 1.0 \times 10^{6}\$$ | $$\ 2.4086 \times 10^{15}\$$ | $$\ \approx 2.41\$$ GB |
 | float16 | $$\ 1.2 \times 10^{6}\$$ | $$\ 2.0086 \times 10^{15}\$$ | $$\ \approx 1.67\$$ GB |
@@ -392,7 +390,7 @@ M_{\text{final}}(\text{float16}) =
 
 #### 5.2.2 압축 후 (GB 단위)
 
-| 타입 | \(C_{\text{total}}\) | raw (B) | 최종 메모리 (GB) |
+| 타입 | $$\ C_{\text{total}}\$$ | raw (B) | 최종 메모리 (GB) |
 |------|-------------------------|---------|-------------------|
 | float32 | $$\ 1.0 \times 10^{6} \$$ | $$\ 2.40086 \times 10^{16} \$$ | $$\ \approx 24.01\$$ GB |
 | float16 | $$\ 1.2 \times 10^{6} \$$ | $$\ 2.00086 \times 10^{16} \$$ | $$\ \approx 16.67\$$ GB |
