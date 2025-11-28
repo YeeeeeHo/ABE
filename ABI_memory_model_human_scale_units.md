@@ -77,9 +77,9 @@ UNIT_DIST = "um"   # neuron position in cortex space
 
 - 인간 뇌 기준 **총 뉴런 수**:
 
-  $$\[
+  $$\
   N_{\text{neuron}} = 8.6 \times 10^{10} \quad \text{(개)}
-  \$$]
+  \$$
 
 ### 1.2 뉴런당 상태 변수 & 단위
 
@@ -109,14 +109,7 @@ UNIT_DIST = "um"   # neuron position in cortex space
 
 **연속형 표현:**
 
-$$\[
-C_m \frac{dV_m}{dt} =
-\bar{g}_{Na} m^3 h (V_m - E_{Na})
- \bar{g}_{K} n^4 (V_m - E_{K})
- \bar{g}_{L} (V_m - E_{L})
- I_{\text{syn}}
- I_{\text{ext}}
-\$$]
+$$\ C_m \frac{dV_m}{dt} = bar{g}_{Na} m^3 h (V_m - E_{Na}) bar{g}_{K} n^4 (V_m - E_{K}) bar{g}_{L} (V_m - E_{L}) I_{\text{syn}} I_{\text{ext}} \$$
 
 - 좌변: `nF * mV/ms = nA` (전류 단위와 일치)
 - 우변 각 항: `µS * mV = nA` (단위 맞음)
