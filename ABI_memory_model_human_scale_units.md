@@ -123,12 +123,12 @@ C_m \frac{dV_m}{dt} =
 
 #### 1.3.2 게이팅 변수 방정식
 
-- \( x \in \{m, h, n\} \), 무차원
-- \( \alpha_x(V_m), \beta_x(V_m) \): 단위 `1/ms`
+- $$\ x \in \{m, h, n\} \$$$, 무차원
+- $$\ \alpha_x(V_m), \beta_x(V_m) \$$: 단위 `1/ms`
 
-\[
+$$\[
 \frac{dx}{dt} = \alpha_x(V_m) (1 - x) - \beta_x(V_m) x
-\]
+\$$]
 
 - 우변 전체 단위: `1/ms` → x는 무차원이므로 OK.
 
