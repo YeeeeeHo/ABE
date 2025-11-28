@@ -85,7 +85,7 @@ UNIT_DIST = "um"   # neuron position in cortex space
 
 | 심볼 | 설명 | 단위(내부) | 타입(예시) |
 |------|------|-----------|------------|
-| \( V_m \) | 막전위 (membrane potential) | `mV` | float32 |
+| $$\( V_m \)$$ | 막전위 (membrane potential) | `mV` | float32 |
 | \( m, h, n \) | Na/K 게이팅 변수 (0~1) | 무차원 (`1`) | float32 |
 | \( C_m \) | 막 용량 | `nF` | float32 |
 | \( \bar{g}_{Na} \) | Na 최대 전도도 | `µS` | float32 |
