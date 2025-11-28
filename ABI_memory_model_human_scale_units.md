@@ -117,9 +117,9 @@ $$\ C_m \frac{dV_m}{dt} = -\bar{g}_{Na} m^3 h (V_m - E_{Na}) -  \bar{g}_{K} n^4 
 - $$\ x \in \{m, h, n\} \$$$, 무차원
 - $$\ \alpha_x(V_m), \beta_x(V_m) \$$: 단위 `1/ms`
 
-$$\[
+$$\
 \frac{dx}{dt} = \alpha_x(V_m) (1 - x) - \beta_x(V_m) x
-\$$]
+\$$
 
 - 우변 전체 단위: `1/ms` → x는 무차원이므로 OK.
 
@@ -134,9 +134,9 @@ $$\[
 
 합산해서 **뉴런 1개당 약 100 bytes**로 모델링한다.
 
-\[
+$$\
 S_{\text{neuron}} \approx 100 \text{ B / neuron}
-\]
+\$$
 
 ### 1.5 전체 뉴런 메모리 (압축 전)
 
