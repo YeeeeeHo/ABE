@@ -58,7 +58,7 @@ UNIT_DIST = "um"   # neuron position in cortex space
 
 ### 0.3 전역 심볼 정의
 
-- $$\( N_{\text{neuron}} \)$$: 뉴런의 총 개수  
+- $$\ N_{\text{neuron}} \$$: 뉴런의 총 개수  
 - $$\( N_{\text{syn}} \)$$: 시냅스의 총 개수  
 - $$\( S_{\text{neuron}} \)$$: 뉴런 1개당 메모리 (bytes)  
 - $$\( S_{\text{syn}} \)$$: 시냅스 1개당 메모리 (bytes)  
