@@ -86,14 +86,14 @@ UNIT_DIST = "um"   # neuron position in cortex space
 | 심볼 | 설명 | 단위(내부) | 타입(예시) |
 |------|------|-----------|------------|
 | $$\ V_m \$$ | 막전위 (membrane potential) | `mV` | float32 |
-| \( m, h, n \) | Na/K 게이팅 변수 (0~1) | 무차원 (`1`) | float32 |
-| \( C_m \) | 막 용량 | `nF` | float32 |
-| \( \bar{g}_{Na} \) | Na 최대 전도도 | `µS` | float32 |
-| \( \bar{g}_{K} \) | K 최대 전도도 | `µS` | float32 |
-| \( \bar{g}_{L} \) | 누설 전도도 | `µS` | float32 |
-| \( E_{Na}, E_K, E_L \) | 역전위 (Na, K, Leak) | `mV` | float32 |
-| \( I_{\text{ext}} \) | 외부 입력 전류 | `nA` | float32 |
-| \( I_{\text{syn}} \) | 시냅스 전류 합 | `nA` | float32 |
+| $$\ m, h, n \$$ | Na/K 게이팅 변수 (0~1) | 무차원 (`1`) | float32 |
+| $$\ C_m \$$ | 막 용량 | `nF` | float32 |
+| $$\ \bar{g}_{Na} \$$ | Na 최대 전도도 | `µS` | float32 |
+| $$\ \bar{g}_{K} \$$ | K 최대 전도도 | `µS` | float32 |
+| $$\ \bar{g}_{L} \$$ | 누설 전도도 | `µS` | float32 |
+| $$\ E_{Na}, E_K, E_L \$$ | 역전위 (Na, K, Leak) | `mV` | float32 |
+| $$\ I_{\text{ext}} \$$ | 외부 입력 전류 | `nA` | float32 |
+| $$\ I_{\text{syn}} \$$ | 시냅스 전류 합 | `nA` | float32 |
 | `spike_time_last` | 마지막 스파이크 발생 시점 | `ms` | float32 |
 | `spike_count` | 누적 스파이크 횟수 | 무차원 (`count`) | int32 |
 
