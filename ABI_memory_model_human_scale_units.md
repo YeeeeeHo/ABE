@@ -9,7 +9,6 @@
 > **“표현 방식만 바꿔서”** 메모리를 줄인다는 전제에 기반한다.
 
 ---
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 ## 0. 전역 단위 & 표기 규칙 (Units & Notation)
 
 실제 구현에서 혼동을 막기 위해, **모든 변수의 단위를 명시적으로 고정**한다.
