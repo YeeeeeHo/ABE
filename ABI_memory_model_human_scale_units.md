@@ -209,11 +209,11 @@ A_+ \exp(-\Delta t / \tau_+) & \Delta t > 0\\
 - $$\ A_+, A_- \$$: 무차원 (learning rate)  
 - $$\ \tau_+, \tau_- \$$: `ms`
 
-결과적으로 \( \Delta w \)는 무차원 → weight의 단위와 일치.
+결과적으로 $$\ Delta w \$$는 무차원 → weight의 단위와 일치.
 
 ### 2.5 시냅스당 메모리 (데이터 타입별 모델링)
 
-| 타입 | weight 표현 | 시냅스당 바이트 수 가정 \( S_{\text{syn}} \) | 비고 |
+| 타입 | weight 표현 | 시냅스당 바이트 수 가정 $$\ S_{\text{syn}} \$$ | 비고 |
 |------|-------------|-------------------------|------|
 | float32 | 32bit | **24 B / synapse** | baseline |
 | float16 | 16bit | **20 B / synapse** | weight만 절반 |
@@ -233,33 +233,33 @@ A_+ \exp(-\Delta t / \tau_+) & \Delta t > 0\\
 
 계산식:
 
-\[
+$$\
 M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}}
-\]
+\$$
 
 #### 3.1.1 낮은 추정: \(N_{\text{syn}}^{\text{low}} = 10^{14}\)
 
 | 타입 | 시냅스당 B | 총 B | TB 단위 | PB 단위 |
 |------|------------|------|---------|---------|
-| float32 | 24 | \(2.4 \times 10^{15}\) | 2400 TB | 2.4 PB |
-| float16 | 20 | \(2.0 \times 10^{15}\) | 2000 TB | 2.0 PB |
-| int8    | 16 | \(1.6 \times 10^{15}\) | 1600 TB | 1.6 PB |
-| int4    | 8  | \(0.8 \times 10^{15}\) | 800 TB  | 0.8 PB |
-| binary  | 4  | \(0.4 \times 10^{15}\) | 400 TB  | 0.4 PB |
+| float32 | 24 | $$\2.4 \times 10^{15}\$$ | 2400 TB | 2.4 PB |
+| float16 | 20 | $$\2.0 \times 10^{15}\$$ | 2000 TB | 2.0 PB |
+| int8    | 16 | $$\1.6 \times 10^{15}\$$ | 1600 TB | 1.6 PB |
+| int4    | 8  | $$\0.8 \times 10^{15}\$$ | 800 TB  | 0.8 PB |
+| binary  | 4  | $$\0.4 \times 10^{15}\$$ | 400 TB  | 0.4 PB |
 
 #### 3.1.2 높은 추정: \(N_{\text{syn}}^{\text{high}} = 10^{15}\)
 
 | 타입 | 시냅스당 B | 총 B | TB 단위 | PB 단위 |
 |------|------------|------|---------|---------|
-| float32 | 24 | \(2.4 \times 10^{16}\) | 24000 TB | 24 PB |
-| float16 | 20 | \(2.0 \times 10^{16}\) | 20000 TB | 20 PB |
-| int8    | 16 | \(1.6 \times 10^{16}\) | 16000 TB | 16 PB |
-| int4    | 8  | \(0.8 \times 10^{16}\) | 8000 TB  | 8 PB  |
-| binary  | 4  | \(0.4 \times 10^{16}\) | 4000 TB  | 4 PB  |
+| float32 | 24 | $$\2.4 \times 10^{16}\$$ | 24000 TB | 24 PB |
+| float16 | 20 | $$\2.0 \times 10^{16}\$$ | 20000 TB | 20 PB |
+| int8    | 16 | $$\1.6 \times 10^{16}\$$ | 16000 TB | 16 PB |
+| int4    | 8  | $$\0.8 \times 10^{16}\$$ | 8000 TB  | 8 PB  |
+| binary  | 4  | $$\0.4 \times 10^{16}\$$ | 4000 TB  | 4 PB  |
 
 ### 3.2 뉴런 + 시냅스 합 (압축 전)
 
-뉴런 메모리 \(M_{\text{neuron}} \approx 8.6 \text{ TB}\)를 더해서,
+뉴런 메모리 $$\M_{\text{neuron}} \approx 8.6 \text{ TB}\$$를 더해서,
 
 예: float16, 높은 추정 (10¹⁵ 시냅스):
 
@@ -267,9 +267,9 @@ M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}}
 - 시냅스: 20 PB = 20000 TB  
 - 합계:
 
-  \[
+  $$\
   M_{\text{raw}} \approx 20008.6 \text{ TB} \approx 20 \text{ PB}
-  \]
+  \$$
 
 ---
 
@@ -278,7 +278,7 @@ M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}}
 여기서는 **뉴런/시냅스 개수를 줄이지 않고**,  
 **표현 방식만 뇌와 비슷하게 바꿔서** 메모리를 줄이는 압축 기법들을 정의한다.
 
-### 4.1 구조적/발달적 압축 배수 \(C_{\text{struct}}\)
+### 4.1 구조적/발달적 압축 배수 $$\C_{\text{struct}}\$$
 
 보수적인(현실적인) 압축 배수 가정:
 
@@ -292,10 +292,10 @@ M_{\text{syn}} = N_{\text{syn}} \times S_{\text{syn}}
 
 전체 구조 압축 배수:
 
-\[
+$$\
 C_{\text{struct}} = 10 \times 10 \times 10 \times 10 \times 100
 = 1 \times 10^{6}
-\]
+\$$
 
 → **구조/발달/표현만으로 약 1,000,000배(10⁶배) 압축**.
 
@@ -304,11 +304,11 @@ C_{\text{struct}} = 10 \times 10 \times 10 \times 10 \times 100
 구조 압축은 float32 기준으로 잡았다고 보고,  
 데이터 타입 변경에 따른 비율은:
 
-\[
+$$\
 C_{\text{type}}(\text{type}) = \frac{24}{S_{\text{syn}}(\text{type})}
-\]
+\$$
 
-| 타입 | 시냅스당 B | \(C_{\text{type}}\) |
+| 타입 | 시냅스당 B | $$\C_{\text{type}}\$$ |
 |------|-----------|------------------------|
 | float32 | 24 | 1.0 |
 | float16 | 20 | 1.2 |
@@ -318,11 +318,11 @@ C_{\text{type}}(\text{type}) = \frac{24}{S_{\text{syn}}(\text{type})}
 
 최종 압축 배수:
 
-\[
+$$\
 C_{\text{total}}(\text{type}) = C_{\text{struct}} \times C_{\text{type}}(\text{type})
-\]
+\$$
 
-| 타입 | \(C_{\text{total}}\) |
+| 타입 | $$\C_{\text{total}}\$$ |
 |------|----------------------|
 | float32 | \(1.0 \times 10^{6}\) |
 | float16 | \(1.2 \times 10^{6}\) |
