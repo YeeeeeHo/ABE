@@ -206,8 +206,8 @@ A_+ \exp(-\Delta t / \tau_+) & \Delta t > 0\\
 \end{cases}
 \$$
 
-- \( A_+, A_- \): 무차원 (learning rate)  
-- \( \tau_+, \tau_- \): `ms`
+- $$\ A_+, A_- \$$: 무차원 (learning rate)  
+- $$\ \tau_+, \tau_- \$$: `ms`
 
 결과적으로 \( \Delta w \)는 무차원 → weight의 단위와 일치.
 
