@@ -10,10 +10,9 @@
 
 ---
 $$
-\begin{aligned}
-f(x)&=ax^2+bx+c\\
-g(x)&=Ax^4
-\end{aligned}$$
+f(x)=ax^2+bx+c\\
+g(x)=Ax^4
+$$
 $a_1, a^2, a_1^2$
 ## 0. 전역 단위 & 표기 규칙 (Units & Notation)
 
