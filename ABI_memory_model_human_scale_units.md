@@ -155,6 +155,7 @@ M_{\text{neuron}} = N_{\text{neuron}} \times S_{\text{neuron}}
 - 인간 뇌 기준 **총 시냅스 수** (범위):
   - 낮은 추정:  
     $$\ N_{\text{syn}}^{\text{low}} = 1 \times 10^{14} \$$
+    
   - 높은 추정:  
     $$\ N_{\text{syn}}^{\text{high}} = 1 \times 10^{15} \$$
 
